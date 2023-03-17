@@ -4,6 +4,7 @@ provider "aws" {
   secret_key = "asdasd"
 }
 
+
 resource "aws_db_instance" "default" {
   allocated_storage = 10
   engine = "mysql"
