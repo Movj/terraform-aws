@@ -5,9 +5,9 @@ variable "region" {
 }
 
 variable "root_domain" {
-    default = "arnol-com-fam"
+    default = "site-main-domain"
 }
 
 variable "site_bucket_subdomain" {
-    default = "site"
+    default = "site-subdomain"
 }
