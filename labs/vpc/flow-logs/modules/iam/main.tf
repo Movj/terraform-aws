@@ -20,10 +20,12 @@ EOF
 
 resource "aws_iam_role_policy_attachment" "vpc_flow_log_policy_attach" {
   role       = aws_iam_role.vpc_flow_log_role.name
-  policy_arn = "arn:aws:iam::493345033300:policy/VPCFlowLog_Rolepolicy"
+  policy_arn = "arn:aws:iam::XXXXXXXXXXXX:policy/VPCFlowLog_Rolepolicy"
 }
 
 resource "aws_iam_instance_profile" "vpc_flow_log_instance_profile" {
   name = "VPCFlowLog_Instance_profile"
   role = aws_iam_role.vpc_flow_log_role.name
 }
+
+// to see a better way to create a role check /labs/apigw/lambda-integration lab.
