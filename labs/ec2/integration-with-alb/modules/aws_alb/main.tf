@@ -61,40 +61,4 @@ module "alb" {
   }
 }
 
-
-// We can define a target group outside the balancer, or in-line
-
-/* resource "aws_lb_target_group" "alb-http-front-end-svc" {
-  name        = "alb-tg-http-front-end-svc"
-  target_type = "alb"
-  port        = 80
-  protocol    = "TCP"
-  vpc_id      = var.default_vpc_id
-  health_check {
-    enabled = true
-    port = "80"
-    timeout = 30
-    matcher = "200"
-    interval = 2
-    path = "/"
-    healthy_threshold = 2
-    unhealthy_threshold = 3
-  }
-} 
-
-resource "aws_lb_target_group_attachment" "tg-assignment-to-alb" {
-  target_id = var.target_id
-  target_group_arn = aws_lb_target_group.alb-http-front-end-svc.arn
-  port = 80
-}
-
-resource "aws_lb_listener" "lb_listener_http" {
-   load_balancer_arn    = module.alb.id
-   port                 = "80"
-   protocol             = "HTTP"
-   default_action {
-    target_group_arn = aws_lb_target_group.alb-http-front-end-svc.id
-    type             = "forward"
-  }
-}
-*/
+// check labs/load-balancer/nlb/simple-config example
