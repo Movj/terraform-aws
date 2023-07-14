@@ -11,7 +11,7 @@ variable "region" {
 }
 
 variable "domain_name" {
-  default = "gaby-isra.com"
+  default = "my-domain.com"
 }
 
 variable "ttl" {
